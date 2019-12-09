@@ -11,4 +11,9 @@ public class Greeting {
 	String greeting(@PathVariable String name) {
 		return "Hello "+ name;
 	}
+	
+	@GetMapping("/")
+	String hello() {
+		return "Hello world";
+	}
 }
