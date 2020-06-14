@@ -4,6 +4,7 @@ public class UserCandidate {
 	
 	String name;
 
+	
 	public String getName() {
 		return name;
 	}
@@ -15,6 +16,10 @@ public class UserCandidate {
 	public UserCandidate(String name) {
 		super();
 		this.name = name;
+	}
+	
+	public UserCandidate() {
+		
 	}
 	
 	

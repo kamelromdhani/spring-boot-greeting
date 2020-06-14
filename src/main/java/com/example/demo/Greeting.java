@@ -43,9 +43,11 @@ public class Greeting {
 
 
     @PostMapping(value = "/")
-    public User createUser(@RequestBody UserCandidate userCandidate) {
+    public UserDto createUser(@RequestBody UserCandidate userCandidate) {
         User user = new User(userCandidate.getName());
-        return user;
+        user = userRepository.save(user);
+        UserDto userDto = new UserDto(user.getId(), user.getFirstname());
+		return userDto;
     }
 	
 	
