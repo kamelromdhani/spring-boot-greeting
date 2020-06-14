@@ -17,6 +17,10 @@ public class User {
 	@Column(name="firstname")
 	private String firstname;
 
+	public User(String name) {
+		this.firstname = name;
+	}
+
 	public Long getId() {
 		return id;
 	}
